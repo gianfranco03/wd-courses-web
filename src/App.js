@@ -1,22 +1,28 @@
-import logo from './logo.svg';
+import {isMobile} from 'react-device-detect';
+
+import logo from './logoumg.jpeg';
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h2>Acceso a apliación Asistencia de Cursos</h2>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          ¡Tu cuena ha sido confirmada!
         </p>
-        <a
+        {isMobile ? 
+          <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
+          href="wdcoursesapp://wdcourses/"
           rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          >
+            Abrir apliación Asistencia de Cursos
+          </a>
+          :
+          null}
       </header>
     </div>
   );
